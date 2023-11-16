@@ -6,13 +6,15 @@
 </div>
 
 <div class="container mb-2 bg-light my-3">
-  <h1><strong>My movie lists</strong></h1>
-  <div class="cards">
+  <div class="d-flex justify-content-between my-2">
+    <h1><strong>My movie lists</strong></h1>
+    <%= link_to "Add a new list", new_list_path, class:"btn btn-primary py-3 rounded-3"  %>
+  </div>
 
+  <div class="cards">
     <%  @lists.each do |list| %>
         <%= link_to "#{list.name}", list_path(list), class:"card-category bg-secondary"  %>
     <% end %>
-
   </div>
-  <%= link_to "Add a new list", new_list_path  %>
+
 </div>
