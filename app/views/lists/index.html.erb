@@ -1,0 +1,18 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1YmmwORJWhNrYu_dlPnofcs7vLyq_zT0FOg&usqp=CAU);">
+  <div class="container">
+    <h1 class="text-center"><strong>For dark rooms lovers </strong></h1>
+    <p class="text-center">Keep track of your favorite movies </p>
+  </div>
+</div>
+
+<div class="container mb-2 bg-light my-3">
+  <h1><strong>My movie lists</strong></h1>
+  <div class="cards">
+
+    <%  @lists.each do |list| %>
+        <%= link_to "#{list.name}", list_path(list), class:"card-category bg-secondary"  %>
+    <% end %>
+
+  </div>
+  <%= link_to "Add a new list", new_list_path  %>
+</div>
